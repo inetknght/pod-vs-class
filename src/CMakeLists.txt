@@ -11,6 +11,7 @@ FILE(GLOB POD_VS_CLASS_HDR "*.hpp")
 LIST(SORT POD_VS_CLASS_HDR)
 SOURCE_GROUP(include FILES ${POD_VS_CLASS_HDR})
 
+ADD_DEFINITIONS(-std=c++17)
 ADD_DEFINITIONS(-g)
 
 # Library
@@ -24,6 +25,9 @@ TARGET_LINK_LIBRARIES(pod-vs-class-test
     )
 
 ADD_EXECUTABLE(pod-vs-class-test-without main.cpp)
+TARGET_LINK_LIBRARIES(pod-vs-class-test-without
+    pod-vs-class-lib
+    )
 TARGET_COMPILE_DEFINITIONS(pod-vs-class-test-without PUBLIC
     -DPOD_VS_CLASS_DISABLED=1
     )

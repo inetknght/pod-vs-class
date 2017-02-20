@@ -6,7 +6,7 @@
 
 namespace pod_vs_class {
 	template <typename t>
-	class integer {
+	class alignas(t) integer {
 		using T = typename std::remove_const<t>::type;
 		T value_;
 
@@ -45,7 +45,9 @@ namespace pod_vs_class {
 
 		template <typename T>
 		friend ::std::ostream & operator<<(std::ostream & out, const integer<T> & v);
-		template <typename T> friend ::std::istream & operator>>(std::istream & in, const integer<T> & v);
+
+		template <typename T>
+		friend ::std::istream & operator>>(std::istream & in, integer<T> & v);
 	};
 
 template<typename T> inline std::ostream & operator<<(std::ostream & out, const integer<T> & v) { return out << v.value_; }

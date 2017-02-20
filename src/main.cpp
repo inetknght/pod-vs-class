@@ -48,40 +48,78 @@ namespace pvc = ::pod_vs_class;
 
 int run_test(int, char **) {
 	::pvc::int8_t v_int8_t = 0;
-	::pvc::int16_t v_int16_t = 0;
-	::pvc::int32_t v_int32_t = 0;
-	::pvc::int64_t v_int64_t = 0;
+	::pvc::int16_t v_int16_t = 1;
+	::pvc::int32_t v_int32_t = 2;
+	::pvc::int64_t v_int64_t = 3;
 
-	::pvc::uint8_t v_uint8_t = 0;
-	::pvc::uint16_t v_uint16_t = 0;
-	::pvc::uint32_t v_uint32_t = 0;
-	::pvc::uint64_t v_uint64_t = 0;
+	::pvc::uint8_t v_uint8_t = 4;
+	::pvc::uint16_t v_uint16_t = 5;
+	::pvc::uint32_t v_uint32_t = 6;
+	::pvc::uint64_t v_uint64_t = 7;
 
-	::pvc::int_least8_t v_int_least8_t = 0;
-	::pvc::int_least16_t v_int_least16_t = 0;
-	::pvc::int_least32_t v_int_least32_t = 0;
-	::pvc::int_least64_t v_int_least64_t = 0;
+	::pvc::int_least8_t v_int_least8_t = 8;
+	::pvc::int_least16_t v_int_least16_t = 9;
+	::pvc::int_least32_t v_int_least32_t = 10;
+	::pvc::int_least64_t v_int_least64_t = 11;
 
-	::pvc::uint_least8_t v_uint_least8_t = 0;
-	::pvc::uint_least16_t v_uint_least16_t = 0;
-	::pvc::uint_least32_t v_uint_least32_t = 0;
-	::pvc::uint_least64_t v_uint_least64_t = 0;
+	::pvc::uint_least8_t v_uint_least8_t = 12;
+	::pvc::uint_least16_t v_uint_least16_t = 13;
+	::pvc::uint_least32_t v_uint_least32_t = 14;
+	::pvc::uint_least64_t v_uint_least64_t = 15;
 
-	::pvc::int_fast8_t v_int_fast8_t = 0;
-	::pvc::int_fast16_t v_int_fast16_t = 0;
-	::pvc::int_fast32_t v_int_fast32_t = 0;
-	::pvc::int_fast64_t v_int_fast64_t = 0;
+	::pvc::int_fast8_t v_int_fast8_t = 16;
+	::pvc::int_fast16_t v_int_fast16_t = 17;
+	::pvc::int_fast32_t v_int_fast32_t = 18;
+	::pvc::int_fast64_t v_int_fast64_t = 19;
 
-	::pvc::uint_fast8_t v_uint_fast8_t = 0;
-	::pvc::uint_fast16_t v_uint_fast16_t = 0;
-	::pvc::uint_fast32_t v_uint_fast32_t = 0;
-	::pvc::uint_fast64_t v_uint_fast64_t = 0;
+	::pvc::uint_fast8_t v_uint_fast8_t = 20;
+	::pvc::uint_fast16_t v_uint_fast16_t = 21;
+	::pvc::uint_fast32_t v_uint_fast32_t = 22;
+	::pvc::uint_fast64_t v_uint_fast64_t = 23;
 
-	::pvc::intmax_t v_intmax_t = 0;
-	::pvc::intptr_t v_intptr_t = 0;
+	::pvc::intmax_t v_intmax_t = 24;
+	::pvc::intptr_t v_intptr_t = 25;
 
-	::pvc::uintmax_t v_uintmax_t = 0;
-	::pvc::uintptr_t v_uintptr_t = 0;
+	::pvc::uintmax_t v_uintmax_t = 26;
+	::pvc::uintptr_t v_uintptr_t = 27;
+
+	::std::cin
+		>> v_int8_t
+		>> v_int16_t
+		>> v_int32_t
+		>> v_int64_t
+
+		>> v_uint8_t
+		>> v_uint16_t
+		>> v_uint32_t
+		>> v_uint64_t
+
+		>> v_int_least8_t
+		>> v_int_least16_t
+		>> v_int_least32_t
+		>> v_int_least64_t
+
+		>> v_uint_least8_t
+		>> v_uint_least16_t
+		>> v_uint_least32_t
+		>> v_uint_least64_t
+
+		>> v_int_fast8_t
+		>> v_int_fast16_t
+		>> v_int_fast32_t
+		>> v_int_fast64_t
+
+		>> v_uint_fast8_t
+		>> v_uint_fast16_t
+		>> v_uint_fast32_t
+		>> v_uint_fast64_t
+
+		>> v_intmax_t
+		>> v_intptr_t
+
+		>> v_uintmax_t
+		>> v_uintptr_t
+	;
 
 	::std::cout
 		<< v_int8_t << '\n'
@@ -119,7 +157,7 @@ int run_test(int, char **) {
 
 		<< v_uintmax_t << '\n'
 		<< v_uintptr_t << '\n'
-	;	;
+	;
 
 	return 0;	
 }
