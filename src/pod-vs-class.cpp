@@ -29,6 +29,15 @@ namespace pod_vs_class {
 		constexpr inline integer_t operator +() const { return +value_; }
 		constexpr inline integer_t operator -() const { return -value_; }
 
+		constexpr inline me & operator *=(const me & rhs) { value_ *= rhs.value_; return *this; }
+		constexpr inline me & operator /=(const me & rhs) { value_ /= rhs.value_; return *this; }
+		constexpr inline me & operator +=(const me & rhs) { value_ += rhs.value_; return *this; }
+		constexpr inline me & operator -=(const me & rhs) { value_ -= rhs.value_; return *this; }
+		constexpr inline me & operator %=(const me & rhs) { value_ %= rhs.value_; return *this; }
+
+		constexpr inline me & operator +=(const me & rhs) const { value_ += rhs.value_; return *this; }
+		constexpr inline me & operator -=(const me & rhs) const { value_ -= rhs.value_; return *this; }
+
 		constexpr inline integer_t & operator++() { ++value_; return *this; }
 		constexpr inline integer_t & operator--() { --value_; return *this; }
 		constexpr inline integer_t operator++(int) { return value_++; }
